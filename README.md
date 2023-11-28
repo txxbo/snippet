@@ -1,6 +1,7 @@
 # snippet
 Snippets to speed up development of Python projects.
 1. google_sheets: connect and manipulate a Google Sheets document
+2. discord_bot: listens for command, also runs scheduled background command
 
 ## google_sheets
 - read_sheet(): displays sheet in 2D array of data
@@ -10,4 +11,11 @@ Snippets to speed up development of Python projects.
 - create service account, download creds into credentials.json
 - give service account permissions to google sheet
 - set sheet_id and sheet_name
-- send it
+
+## discord_bot
+- responds to !hello
+- runs command every minute
+##### configure
+- requires bot to be setup
+- need to insert bot token
+- need to edit channel ID, if used in task
