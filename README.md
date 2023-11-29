@@ -2,6 +2,7 @@
 Snippets to speed up development of Python projects.
 1. google_sheets: connect and manipulate a Google Sheets document
 2. discord_bot: listens for command, also runs scheduled background command
+3. send_mail: using Google/SMTP, send an email message from gmail account
 
 ## google_sheets
 - read_sheet(): displays sheet in 2D array of data
@@ -19,3 +20,12 @@ Snippets to speed up development of Python projects.
 - requires bot to be setup
 - need to insert bot token
 - need to edit channel ID, if used in task
+
+## send_mail
+- send an email using your gmail account
+- needs some configuration
+##### configure
+- sign into Google, ensure 2FA is enabled
+- create an app password
+- replace username and email in the script
+- make sure you test your email before using in production
