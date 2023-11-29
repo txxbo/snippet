@@ -3,6 +3,8 @@ Snippets to speed up development of Python projects.
 1. google_sheets: connect and manipulate a Google Sheets document
 2. discord_bot: listens for command, also runs scheduled background command
 3. send_mail: using Google/SMTP, send an email message from gmail account
+4. sendgrid_mail: send an email message using sendgrid account
+5. twilio_sms: send sms text message with twilio account
 
 ## google_sheets
 - read_sheet(): displays sheet in 2D array of data
@@ -29,3 +31,12 @@ Snippets to speed up development of Python projects.
 - create an app password
 - replace username and email in the script
 - make sure you test your email before using in production
+
+## sendgrid_mail
+- send an email using sendmail
+- add api key before sending
+
+## twilio_sms
+- fill in sid and auth token
+- setup twilio phone number
+- setup recipient and body of text
