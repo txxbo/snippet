@@ -2,7 +2,10 @@ import smtplib
 from email.message import EmailMessage
 from typing import List
 
-def send_email(subject: str, body: str, to_emails: List[str], from_email: str, password: str) -> None:
+
+def send_email(
+    subject: str, body: str, to_emails: List[str], from_email: str, password: str
+) -> None:
     """
     Send an email using the SMTP protocol.
 
@@ -15,26 +18,27 @@ def send_email(subject: str, body: str, to_emails: List[str], from_email: str, p
 
     Example:
     send_email(
-        "Test Subject", 
-        "This is a test email", 
-        ["recipient@example.com"], 
-        "your-email@gmail.com", 
+        "Test Subject",
+        "This is a test email",
+        ["recipient@example.com"],
+        "your-email@gmail.com",
         "your-password"
     )
     """
     # Create the email message
     msg = EmailMessage()
     msg.set_content(body)
-    msg['Subject'] = subject
-    msg['From'] = from_email
-    msg['To'] = ', '.join(to_emails)
+    msg["Subject"] = subject
+    msg["From"] = from_email
+    msg["To"] = ", ".join(to_emails)
 
     # Connect to Gmail's SMTP server
-    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
         smtp.login(from_email, password)  # Login to the SMTP server
         smtp.send_message(msg)  # Send the email
 
     print("Email sent successfully.")
+
 
 # Example usage
 if __name__ == "__main__":
@@ -43,5 +47,5 @@ if __name__ == "__main__":
         "This is a test email",
         ["recipient@example.com"],
         "your-email@gmail.com",
-        "your-password"
+        "your-password",
     )
